@@ -1,8 +1,9 @@
 import React from 'react';
-import { 
-  Code2, PenTool, Home, Wrench, Stethoscope, 
-  Scale, Megaphone, BarChart3, Gamepad2 
+import {
+  Code2, PenTool, Home, Wrench, Stethoscope,
+  Scale, Megaphone, BarChart3, Gamepad2
 } from 'lucide-react';
+import DoctorSimulation from './DoctorSimulation';
 
 const Careers: React.FC = () => {
   const careers = [
@@ -20,17 +21,22 @@ const Careers: React.FC = () => {
   return (
     <section id="careers" className="py-24 bg-brand-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-            <div>
-                <h2 className="text-3xl font-bold text-white mb-2">ხელმისაწვდომი სიმულაციები</h2>
-                <p className="text-gray-400">დაიწყე ნებისმიერი მიმართულებით სრულიად უფასოდ.</p>
-            </div>
+        <div className="flex flex-col mb-12 gap-8">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl font-bold text-white mb-2">ხელმისაწვდომი სიმულაციები</h2>
+            <p className="text-gray-400">დაიწყე ნებისმიერი მიმართულებით სრულიად უფასოდ.</p>
+          </div>
+
+          {/* Doctor Simulation Preview */}
+          <div className="w-full">
+            <DoctorSimulation />
+          </div>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {careers.map((career, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className={`
                 group flex items-center justify-center gap-3 p-4 
                 bg-brand-surface border rounded-xl 
@@ -44,7 +50,7 @@ const Careers: React.FC = () => {
               <span className="font-medium text-sm text-gray-200 group-hover:text-white">{career.name}</span>
             </div>
           ))}
-          
+
           {/* "More coming soon" pill */}
           <div className="flex items-center justify-center p-4 border border-dashed border-white/10 rounded-xl text-gray-500 text-sm">
             + მეტი მალე დაემატება
