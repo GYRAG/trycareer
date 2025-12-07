@@ -32,10 +32,15 @@ const Hero: React.FC = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-              <button className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-brand-primary to-brand-accent hover:from-blue-600 hover:to-brand-primary text-white rounded-xl font-bold shadow-lg shadow-brand-primary/25 transition-all transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 group">
+              <a
+                href="https://game-trycareer.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-brand-primary to-brand-accent hover:from-blue-600 hover:to-brand-primary text-white rounded-xl font-bold shadow-lg shadow-brand-primary/25 transition-all transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 group"
+              >
                 <Play className="w-5 h-5 fill-current" />
                 სცადე
-              </button>
+              </a>
 
               <button className="w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 text-white rounded-xl font-semibold border border-white/10 transition-all flex items-center justify-center gap-2">
                 გაიგე მეტი
